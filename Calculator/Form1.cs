@@ -9,6 +9,7 @@ namespace Calculator
         double result = 0;
         string operation = "";
         bool operationPending = false;
+        bool fromOperation = false;
         public Form1()
         {
             InitializeComponent();
@@ -22,71 +23,121 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            if (fromOperation)
+            {
+                currentInput = "";
+                fromOperation = false;
+            }
             Button button = (Button)sender;
-            currentInput = button.Text;
+            currentInput = currentInput + button.Text;
             textBox1.Text = currentInput;
         }
 
@@ -121,6 +172,7 @@ namespace Calculator
                 textBox1.Text = result.ToString();
                 currentInput = textBox1.Text;
                 operationPending = false;
+                fromOperation = true;
             }
         }
 
